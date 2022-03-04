@@ -1,12 +1,15 @@
-# Base image: Alpine
 FROM ghcr.io/devilld/py-node
 COPY . /app/
 WORKDIR /app/
-RUN apk add --no-cache git ffmpeg \
+RUN apt -qq update \
+    && apt -qq install \
+    --no-install-recommends \
+    git ffmpeg \
     && pip3 install --upgrade \
     pip setuptools wheel \
     && pip3 install --no-cache-dir \
     --upgrade -r requirements.txt \
-    && apk del .build-deps \
-    && rm -rf /var/cache/apk/* /tmp/*
+    && apt autoremove -y \
+    && apt clean all \
+    && rm -rf /var/lib/apt/lists/* /tmp/*
 CMD ["python3", "main.py"]
