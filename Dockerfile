@@ -1,4 +1,4 @@
-# Alpine Image
+# Base image: Alpine
 FROM ghcr.io/devilld/py-node
 COPY . /app/
 WORKDIR /app/
