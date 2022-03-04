@@ -1,10 +1,14 @@
 # this docker will installed latest build version of NodeJs and Python version
-FROM nikolaik/python-nodejs:latest
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends ffmpeg \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# FROM nikolaik/python-nodejs:latest
+# Alpine Image
+FROM ghcr.io/devilld/py-node
 COPY . /app/
 WORKDIR /app/
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+RUN apk add --no-cache git ffmpeg \
+    && pip3 install --upgrade \
+    pip setuptools wheel \
+    && pip3 install --no-cache-dir \
+    --upgrade -r requirements.txt \
+    && apk del .build-deps \
+    && rm -rf /var/cache/apk/* /tmp/*
 CMD ["python3", "main.py"]
