@@ -1,3 +1,6 @@
+![Docker Image](https://github.com/devillD/video-stream-bot/actions/workflows/push.yml/badge.svg)
+
+
 <p align="center"><a href="https://t.me/VeezVideoBot"><img src="https://github.com/levina-lab/video-stream/raw/main/driver/veezlogo.png"></a></p>
 <p align="center">
     <br><b>Video Stream is an Open-Source Telegram Bot project that's allow you to play Video & Music trough the Telegram Group Video Chat</b><br>
