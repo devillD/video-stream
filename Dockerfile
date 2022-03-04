@@ -4,7 +4,7 @@ WORKDIR /app/
 RUN apt -qq update \
     && apt -qq install \
     --no-install-recommends \
-    git ffmpeg \
+    git ffmpeg -y \
     && pip3 install --upgrade \
     pip setuptools wheel \
     && pip3 install --no-cache-dir \
