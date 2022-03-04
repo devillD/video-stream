@@ -1,5 +1,3 @@
-# this docker will installed latest build version of NodeJs and Python version
-# FROM nikolaik/python-nodejs:latest
 # Alpine Image
 FROM ghcr.io/devilld/py-node
 COPY . /app/
