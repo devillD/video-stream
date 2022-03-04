@@ -3,7 +3,8 @@
 FROM ghcr.io/devilld/py-node
 COPY . /app/
 WORKDIR /app/
-RUN apk add --no-cache git ffmpeg \
+RUN set -eux && \
+    apk add --no-cache git ffmpeg \
     && pip3 install --upgrade \
     pip setuptools wheel \
     && pip3 install --no-cache-dir \
