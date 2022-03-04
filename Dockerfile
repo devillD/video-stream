@@ -1,5 +1,4 @@
 # Base image: Alpine
-# With this repo, Size is ~250MB
 FROM ghcr.io/devilld/py-node
 COPY . /app/
 WORKDIR /app/
