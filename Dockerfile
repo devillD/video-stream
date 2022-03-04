@@ -1,5 +1,5 @@
 FROM ghcr.io/devilld/py-node
-RUN RUN apk add --no-cache --virtual .build-deps \
+RUN apk add --no-cache --virtual .build-deps \
     gcc linux-headers make zlib-dev jpeg-dev \
     gnupg tar xz bluez-dev bzip2-dev dpkg-dev \
     dpkg expat-dev findutils gdbm-dev tcl-dev \
