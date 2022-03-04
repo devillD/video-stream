@@ -1,4 +1,3 @@
-# DEV
 FROM ghcr.io/devilld/py-node
 COPY . /app/
 WORKDIR /app/
