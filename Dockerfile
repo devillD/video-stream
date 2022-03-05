@@ -6,7 +6,8 @@ RUN sudo apt -qq update \
     && sudo apt -qq install \
     --no-install-recommends \
     git ffmpeg -y \
-    && mv /home/unkusr/BOT/profile /home/unkusr/.profile \
+    && sudo mv /home/unkusr/BOT/profile \
+    /home/unkusr/.profile \
     && . ~/.profile \
     && pip3 install --upgrade -U \
     pip setuptools wheel \
