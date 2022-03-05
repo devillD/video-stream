@@ -1,7 +1,7 @@
 FROM ghcr.io/devilld/py-node
 ENV DEBIAN_FRONTEND=noninteractive
 COPY . /BOT/
-WORKDIR /BOT/
+WORKDIR /BOT
 RUN apt -qq update \
     && apt -qq install \
     --no-install-recommends \
