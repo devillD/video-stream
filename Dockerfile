@@ -1,4 +1,5 @@
 FROM ghcr.io/devilld/py-node
+ENV DEBIAN_FRONTEND=noninteractive
 COPY . /home/unkusr/BOT/
 WORKDIR /home/unkusr/BOT/
 RUN sudo apt -qq update \
