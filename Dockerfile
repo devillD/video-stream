@@ -4,7 +4,6 @@ COPY . /BOT/
 WORKDIR /BOT
 RUN apt -qq update && \
     apt -qq install --no-install-recommends git ffmpeg -y && \
-#    pip3 install --upgrade --no-cache-dir pip setuptools wheel && \
     pip3 install --no-cache-dir -r requirements.txt && \
     apt remove curl -y && \
     apt autoremove -y && \
