@@ -1,7 +1,7 @@
 FROM ghcr.io/devilld/py-node
 ENV DEBIAN_FRONTEND=noninteractive
-COPY . /BOT/
 WORKDIR /BOT
+COPY . .
 RUN apt -qq update && \
     apt -qq install --no-install-recommends git ffmpeg -y && \
     pip install --no-cache-dir -r requirements.txt && \
